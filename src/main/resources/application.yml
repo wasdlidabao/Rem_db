@@ -1,0 +1,22 @@
+server:
+  port: 7891
+spring:
+  application:
+    name: rem-db
+  datasource:
+    platform: mysql
+    url: jdbc:mysql://142.31.3.34:3306/rem_db?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    username: root
+    password: aits@2022
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    open-in-view: true
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+timer:
+  deleteCorn: 0 10 15 * * ?
