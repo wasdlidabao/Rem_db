@@ -1,8 +1,6 @@
 package com.tz.db.domain.vo;
 
 import com.tz.db.domain.po.*;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
@@ -14,18 +12,21 @@ import java.util.List;
  */
 @Data
 @Accessors(chain = true)
-@ApiModel(value = "服务器性能")
 public class ServerVO {
-
-    @ApiModelProperty(name = "cpu", value = "cpu")
-    Cpu cpu;
-    @ApiModelProperty(name = "memory", value = "内存")
-    Memory memory;
-    @ApiModelProperty(name = "diskSpace", value = "磁盘")
-    DiskSpace diskSpace;
-    @ApiModelProperty(name = "gpus", value = "gpu")
+    Top cpu;
+    FreeMemory memory;
+    List<FileSystem> fileSystems;
     List<Gpus> gpus;
-    @ApiModelProperty(name = "net", value = "网络")
     Net net;
 
+    @Override
+    public String toString() {
+        return "ServerVO{" +
+                "cpu=" + cpu +
+                ", memory=" + memory +
+                ", fileSystems=" + fileSystems +
+                ", gpus=" + gpus +
+                ", net=" + net +
+                '}';
+    }
 }

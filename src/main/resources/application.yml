@@ -5,9 +5,9 @@ spring:
     name: rem-db
   datasource:
     platform: mysql
-    url: jdbc:mysql://142.31.3.34:3306/rem_db?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    url: jdbc:mysql://192.168.2.112:3306/rem_db?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
     username: root
-    password: aits@2022
+    password: tzwy
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     open-in-view: true

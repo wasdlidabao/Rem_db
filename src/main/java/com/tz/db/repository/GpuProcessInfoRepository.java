@@ -13,7 +13,7 @@ public interface GpuProcessInfoRepository extends BaseRepository<GpuProcessInfo>
 
     @Transactional
     @Modifying
-    @Query(value = "DELETE FROM gpu_process_info WHERE create_time < DATE_ADD(CURDATE(),INTERVAL -1 WEEK)", nativeQuery = true)
+    @Query(value = "DELETE FROM gpu_process_info WHERE create_time < DATE_ADD(CURDATE(),INTERVAL -3 DAY)", nativeQuery = true)
     void deleteByCreateTime();
 
 }

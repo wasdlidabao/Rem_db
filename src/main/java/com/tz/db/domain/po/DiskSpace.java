@@ -1,7 +1,5 @@
 package com.tz.db.domain.po;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -22,7 +20,6 @@ import java.util.List;
 @Table(name = "disk_space")
 @org.hibernate.annotations.Table(appliesTo = "disk_space", comment = "磁盘")
 @EntityListeners(AuditingEntityListener.class)
-@ApiModel(value = "磁盘")
 public class DiskSpace extends BasePO {
 
     @GeneratedValue(generator = "uid")
@@ -31,17 +28,13 @@ public class DiskSpace extends BasePO {
     @Column(unique = true, nullable = false, updatable = false, length = 36, columnDefinition = "VARCHAR(36)")
     String id;
 
-    @ApiModelProperty(name = "total", value = "总量")
     @Column(name = "total", columnDefinition = "VARCHAR(10) DEFAULT NULL COMMENT '总量'")
     String total;
-    @ApiModelProperty(name = "free", value = "可用")
     @Column(name = "free", columnDefinition = "VARCHAR(10) DEFAULT NULL COMMENT '可用'")
     String free;
-    @ApiModelProperty(name = "used", value = "已用")
     @Column(name = "used", columnDefinition = "VARCHAR(10) DEFAULT NULL COMMENT '已用'")
     String used;
     @Transient
-    @ApiModelProperty(name = "diskSpaceIOVOs", value = "io相关")
     List<DiskSpaceIO> diskSpaceIOVOs;
 
 }

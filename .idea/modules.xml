@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/IDEASource.Rem_db.main.iml" filepath="$PROJECT_DIR$/.idea/modules/IDEASource.Rem_db.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/IDEAWorkplace.Rem_db.main.iml" filepath="$PROJECT_DIR$/.idea/modules/IDEAWorkplace.Rem_db.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Rem_db.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Rem_db.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.tz.Rem_db.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.tz.Rem_db.main.iml" />
     </modules>
   </component>
 </project>

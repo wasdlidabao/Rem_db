@@ -11,11 +11,11 @@ import javax.persistence.*;
 @Data
 @Entity
 @Accessors(chain = true)
-@EqualsAndHashCode(callSuper=false)
-@Table(name = "gpu")
-@org.hibernate.annotations.Table(appliesTo = "gpu", comment = "gpu")
+@EqualsAndHashCode(callSuper = false)
+@Table(name = "file_system_base")
+@org.hibernate.annotations.Table(appliesTo = "file_system_base", comment = "磁盘")
 @EntityListeners(AuditingEntityListener.class)
-public class Gpu extends BasePO {
+public class FileSystemBase extends BasePO {
 
     @GeneratedValue(generator = "uid")
     @GenericGenerator(name = "uid", strategy = "org.hibernate.id.UUIDGenerator")

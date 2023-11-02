@@ -27,6 +27,14 @@ public class DeleteTimer {
     MemoryRepository memoryRepository;
     @Resource
     NetRepository netRepository;
+    @Resource
+    TopRepository topRepository;
+    @Resource
+    FileSystemRepository fileSystemRepository;
+    @Resource
+    FileSystemBaseRepository fileSystemBaseRepository;
+    @Resource
+    FreeMemoryRepository freeMemoryRepository;
 
     /**
      * 每天的23点执行一次,删除一周前的数据
@@ -42,6 +50,10 @@ public class DeleteTimer {
             gpuProcessInfoRepository.deleteByCreateTime();
             memoryRepository.deleteByCreateTime();
             netRepository.deleteByCreateTime();
+            topRepository.deleteByCreateTime();
+            fileSystemRepository.deleteByCreateTime();
+            fileSystemBaseRepository.deleteByCreateTime();
+            freeMemoryRepository.deleteByCreateTime();
         } catch (Exception e) {
             log.error("定时删除数据", e);
         }

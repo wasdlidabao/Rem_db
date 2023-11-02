@@ -1,0 +1,15 @@
+version: '2'
+services:
+  system:
+    restart: always
+    build: ./system
+    image: system:rem
+    volumes:
+        - /home/workspace/remdb/log:/home/remdb/
+        - /etc/localtime:/etc/localtime
+        - /etc/timezone:/etc/timezone
+    network_mode: "host"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
